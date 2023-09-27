@@ -1,0 +1,21 @@
+# .rubocop.yml
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/**/*'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'app/services/lcs_calculator.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/services/lottery_processor_spec.rb'
+    - 'spec/controllers/lottery_controller_spec.rb'
+
+Style/Documentation:
+  Enabled: false

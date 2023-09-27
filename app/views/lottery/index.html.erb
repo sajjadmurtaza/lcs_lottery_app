@@ -1,0 +1,21 @@
+<h1 class="text-center">Lottery Results</h1>
+<div class="container mt-5">
+  <div class="row">
+
+    <% if @lottery_files.present? %>
+      <div class="col-md-4">
+        <%= render 'csv_file_list' %>
+      </div>
+    <% end %>
+
+    <div class="col-md-8">
+      
+      <%= render 'form' %>
+      <% if @winners.present? %>
+        <%= render 'winners_table' %>
+      <% else %>
+        <p class="mt-5 text-center">No winners found.</p>
+      <% end %>
+    </div>
+  </div>
+</div>

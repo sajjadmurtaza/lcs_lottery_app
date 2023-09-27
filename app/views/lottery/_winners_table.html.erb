@@ -1,0 +1,17 @@
+<h2 class="mt-5">Winners</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Participant</th>
+      <th>Credits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @winners.each do |winner| %>
+      <tr>
+        <td><%= winner[0] %></td>
+        <td><%= winner[1] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

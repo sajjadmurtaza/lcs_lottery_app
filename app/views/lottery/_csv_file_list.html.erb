@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    Download CSV Files
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <% @lottery_files.each do |csv_file| %>
+        <li class="list-group-item">
+          <%= link_to File.basename(csv_file), download_csv_path(filename: File.basename(csv_file)) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
